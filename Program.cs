@@ -6,13 +6,13 @@ namespace AreaOfACircle
     {
         static void Main(string[] args)
         {
-            string UserInput = "-1";
+            string UserInput;
             double Radius;
             double Area;
             double Circum;
             double Diameter;
 
-            while (Double.Parse(UserInput) < 0 || UserInput.Equals(""))
+            do
             {
                 Console.WriteLine("Enter the radius of a circle: ");
                 UserInput = Console.ReadLine();
@@ -21,9 +21,9 @@ namespace AreaOfACircle
                     Console.WriteLine("Error: Entered a Non-numerical string!!");
                     Environment.Exit(0);
                 }
-            }
+            } while (Double.Parse(UserInput) < 0 || UserInput.Equals(""));
 
-            Radius = Double.Parse(UserInput);
+                Radius = Double.Parse(UserInput);
             Area = Circle.Area(Radius);
             Circum = Circle.Circumference(Radius);
             Diameter = Circle.Diameter(Radius);

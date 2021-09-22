@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AreaOfACircle
 {
-    public static class Circle
+    public class Circle
     {
         public static double Area(double radius)
         {
